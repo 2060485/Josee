@@ -17,20 +17,6 @@ function App() {
     { label: 'Stéphane Simard', sound: 'StefS' },
   ];
 
-  // Preload audio files on mount
-  useEffect(() => {
-    const preloadAudio = () => {
-      const cache = {};
-      buttons.forEach((button) => {
-        // Adjusted file path using process.env.PUBLIC_URL
-        const audio = new Audio(`${process.env.PUBLIC_URL}/Assets/${button.sound}.mp3`);
-        cache[button.sound] = audio;
-      });
-      setAudioCache(cache);
-    };
-    preloadAudio();
-  }, [buttons]);
-
   const playSound = (name) => {
     const audio = audioCache[name];
     if (audio) {
