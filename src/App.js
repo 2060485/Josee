@@ -21,7 +21,7 @@ function App() {
   const playSound = (name) => {
     const audio = audioCache[name];
     if (audio) {
-      audio.currentTime = 0; // Reset to the start of the audio
+      audio.currentTime = 0;
       audio.play();
     }
   };
