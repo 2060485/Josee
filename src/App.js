@@ -1,9 +1,8 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
-  const [audioCache, setAudioCache] = useState({});
 
   const buttons = [
     { label: 'Anaïs', sound: 'Anais' },
@@ -18,11 +17,9 @@ function App() {
   ];
 
   const playSound = (name) => {
-    const audio = audioCache[name];
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play();
-    }
+    // Load the audio file only when the button is clicked
+    const audio = new Audio(`${process.env.PUBLIC_URL}/Assets/${name}.mp3`);
+    audio.play();
   };
 
   return (
