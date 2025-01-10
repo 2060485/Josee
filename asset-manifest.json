@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Josee/static/css/main.fb961db8.css",
-    "main.js": "/Josee/static/js/main.c96ba55b.js",
+    "main.js": "/Josee/static/js/main.71df0d2a.js",
     "static/js/488.9c92ff38.chunk.js": "/Josee/static/js/488.9c92ff38.chunk.js",
     "index.html": "/Josee/index.html",
     "main.fb961db8.css.map": "/Josee/static/css/main.fb961db8.css.map",
-    "main.c96ba55b.js.map": "/Josee/static/js/main.c96ba55b.js.map",
+    "main.71df0d2a.js.map": "/Josee/static/js/main.71df0d2a.js.map",
     "488.9c92ff38.chunk.js.map": "/Josee/static/js/488.9c92ff38.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb961db8.css",
-    "static/js/main.c96ba55b.js"
+    "static/js/main.71df0d2a.js"
   ]
 }
