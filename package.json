@@ -1,5 +1,6 @@
 {
-  "name": "http://2060485.github.io/Josee",
+  "name": "my-app",
+  "homepage": "http://2060485.github.io/Josee",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
