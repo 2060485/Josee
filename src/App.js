@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const playSound = (name) => {
-    const audio = new Audio(`/Assets/${name}.mp3`);
+    const audio = new Audio(`${process.env.PUBLIC_URL}/Assets/${name}.mp3`);
     audio.play();
   };
 
