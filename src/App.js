@@ -1,10 +1,29 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [audioCache, setAudioCache] = useState({});
+
+  // Preload audio files on mount
+  useEffect(() => {
+    const preloadAudio = () => {
+      const cache = {};
+      buttons.forEach((button) => {
+        const audio = new Audio(`/Assets/${button.sound}.mp3`);
+        cache[button.sound] = audio;
+      });
+      setAudioCache(cache);
+    };
+    preloadAudio();
+  }, []);
+
   const playSound = (name) => {
-    const audio = new Audio(`/Assets/${name}.mp3`);
-    audio.play();
+    const audio = audioCache[name];
+    if (audio) {
+      audio.currentTime = 0; // Reset to the start of the audio
+      audio.play();
+    }
   };
 
   const buttons = [
