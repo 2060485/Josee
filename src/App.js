@@ -5,27 +5,6 @@ import { useEffect, useState } from 'react';
 function App() {
   const [audioCache, setAudioCache] = useState({});
 
-  // Preload audio files on mount
-  useEffect(() => {
-    const preloadAudio = () => {
-      const cache = {};
-      buttons.forEach((button) => {
-        const audio = new Audio(`/Assets/${button.sound}.mp3`);
-        cache[button.sound] = audio;
-      });
-      setAudioCache(cache);
-    };
-    preloadAudio();
-  }, []);
-
-  const playSound = (name) => {
-    const audio = audioCache[name];
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play();
-    }
-  };
-
   const buttons = [
     { label: 'Anaïs', sound: 'Anais' },
     { label: 'Annie Lalonde', sound: 'AnnieLa' },
@@ -37,6 +16,28 @@ function App() {
     { label: 'Stéphane Normand', sound: 'StefN' },
     { label: 'Stéphane Simard', sound: 'StefS' },
   ];
+
+  // Preload audio files on mount
+  useEffect(() => {
+    const preloadAudio = () => {
+      const cache = {};
+      buttons.forEach((button) => {
+        // Adjusted file path using process.env.PUBLIC_URL
+        const audio = new Audio(`${process.env.PUBLIC_URL}/Assets/${button.sound}.mp3`);
+        cache[button.sound] = audio;
+      });
+      setAudioCache(cache);
+    };
+    preloadAudio();
+  }, [buttons]);
+
+  const playSound = (name) => {
+    const audio = audioCache[name];
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  };
 
   return (
     <div className="App container text-center">
