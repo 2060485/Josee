@@ -1,8 +1,11 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
-import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const playSound = (name) => {
+    const audio = new Audio(`/Assets/${name}.mp3`);
+    audio.play();
+  };
 
   const buttons = [
     { label: 'Anaïs', sound: 'Anais' },
@@ -15,12 +18,6 @@ function App() {
     { label: 'Stéphane Normand', sound: 'StefN' },
     { label: 'Stéphane Simard', sound: 'StefS' },
   ];
-
-  const playSound = (name) => {
-    // Load the audio file only when the button is clicked
-    const audio = new Audio(`${process.env.PUBLIC_URL}/Assets/${name}.mp3`);
-    audio.play();
-  };
 
   return (
     <div className="App container text-center">
