@@ -22,6 +22,7 @@ function App() {
     { label: 'Stéphane Simard', sound: 'StefS' },
     { label: 'Timothé', sound: 'Timo' },
     { label: 'Alexanne', sound: 'Alex' },
+    { label: 'Secret', sound: 'Secret' },
   ];
 
   return (
