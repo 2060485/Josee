@@ -28,11 +28,16 @@ function App() {
     <div className="App container text-center">
       <header className="App-header my-5 p-5">
         <h1 className="display-4">
+          Les tabarnaks à Josée
+        </h1>
+        <br/>
+        <p>
           Parce que tu es une personne exceptionnelle, 
           nous avons voulu te rappeler à quel point tu comptes pour nous tous. 
           Chaque jour, ta présence fait une différence, et ton énergie, 
           ta gentillesse et ton sourire illuminent nos vies. 
-          Chacun de nous y a mis un peu de son cœur pour te montrer à quel point tu es précieux/précieuse à nos yeux.</h1>
+          Chacun de nous y a mis un peu de son cœur pour te montrer à quel point tu es précieuse à nos yeux.
+        </p>
         <div className="row justify-content-center mt-4">
           {buttons.map((button, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-3">
