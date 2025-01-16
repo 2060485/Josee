@@ -9,6 +9,8 @@ function App() {
 
   const buttons = [
     { label: 'Anaïs', sound: 'Anais' },
+    { label: 'Laurier', sound: 'Laurier' },
+    { label: 'Sébastien', sound: 'Sebastien' },
     { label: 'Annie Lalonde', sound: 'AnnieLa' },
     { label: 'Annie Lehoux', sound: 'AnnieLe' },
     { label: 'Julien', sound: 'Julien' },
@@ -16,7 +18,10 @@ function App() {
     { label: 'Danny', sound: 'Danny' },
     { label: 'Anick', sound: 'Anick' },
     { label: 'Stéphane Normand', sound: 'StefN' },
+    { label: 'Mathis', sound: 'Mathis' },
     { label: 'Stéphane Simard', sound: 'StefS' },
+    { label: 'Timothé', sound: 'Timo' },
+    { label: 'Alexanne', sound: 'Alex' },
   ];
 
   return (
