@@ -27,7 +27,12 @@ function App() {
   return (
     <div className="App container text-center">
       <header className="App-header my-5 p-5">
-        <h1 className="display-4">Tabarnak</h1>
+        <h1 className="display-4">
+          Parce que tu es une personne exceptionnelle, 
+          nous avons voulu te rappeler à quel point tu comptes pour nous tous. 
+          Chaque jour, ta présence fait une différence, et ton énergie, 
+          ta gentillesse et ton sourire illuminent nos vies. 
+          Chacun de nous y a mis un peu de son cœur pour te montrer à quel point tu es précieux/précieuse à nos yeux.</h1>
         <div className="row justify-content-center mt-4">
           {buttons.map((button, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-4 mb-3">
