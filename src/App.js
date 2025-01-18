@@ -33,11 +33,8 @@ function App() {
         </h1>
         <br/>
         <p>
-          Parce que tu es une personne exceptionnelle, 
-          nous avons voulu te rappeler à quel point tu comptes pour nous tous. 
-          Chaque jour, ta présence fait une différence, et ton énergie, 
-          ta gentillesse et ton sourire illuminent nos vies. 
-          Chacun de nous y a mis un peu de son cœur pour te montrer à quel point tu es précieuse à nos yeux.
+          On sait que tu aimais beaucoup ton application d'Elvis Gratton.
+          Voici un petit cadeau auquel chacun d'entre nous a participé pour toi.
         </p>
         <div className="row justify-content-center mt-4">
           {buttons.map((button, index) => (
